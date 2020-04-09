@@ -1,0 +1,21 @@
+/* miniprogram/page/boarding/university/search.wxss *//* example/input/input.wxss */
+@import '../../../weui/example/common.wxss';
+.bd-text-size {
+  font-size: medium;
+}
+
+.bd-text-smallsize {
+  font-size: small;
+}
+page{
+  background-color: #FFFFFF;
+}
+
+.bd-placeholder-must {
+  color:#40AE46;
+  font-size: small;
+}
+
+.bd-placeholder-alter {
+  font-size: small;
+}

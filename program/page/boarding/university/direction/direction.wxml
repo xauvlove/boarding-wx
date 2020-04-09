@@ -1,0 +1,138 @@
+<view class="index">
+  <view class="index-hd">
+    <!-- <image class="index-logo" src="resources/kind/logo.png"></image> -->
+    <view class="index-desc">以下是查询到您所选择的高校招生详细信息</view>
+    <view class="index-desc" style="color:blue">点击可查看专业招生详情</view>
+  </view>
+  <view class="index-bd">
+    <view class="kind-list">
+      <block wx:for-items="{{universityDirections}}" wx:for-item="item" wx:key="{{item.fid}}">
+        <view class="kind-list-item">
+          <view id="{{item.fid}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="openDetial">
+            <view class="kind-list-text">{{item.universityDirectionVOContent.direction}}</view>
+            <view class="kind-list-text-right">招生人数：{{item.universityDirectionVOContent.recruitmentCount}}</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view> 
+            <!-- <image class="kind-list-img" src="resources/kind/{{item.id}}.png"></image> -->
+          </view>
+          
+          <!-- <view class="kind-list-item-bd kind-list-item-bd-show">
+            <view class="navigator-box navigator-box-show">
+              <block wx:for-items="{{universityDirections}}" wx:key="detail">
+
+
+                <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                  <view class="navigator-text">{{item.instituteCode}}</view>
+                  <view class="navigator-arrow"></view>
+                </navigator>
+              </block>
+            </view>
+          </view> -->
+
+
+           <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+              <block wx:for-item="{{item.universityDirectionVOContent}}" wx:key="*item">
+                <!-- <navigator url="pages/{{page}}/{{page}}" class="navigator"> -->
+                  <!-- <view class="navigator-text">{{item.instituteCode}}</view> -->
+                  <!-- <view class="navigator-arrow"></view> -->
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">高校名：&nbsp;</text>
+                    <text class="navigator-textContent">{{item.universityDirectionVOContent.universityName}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">门类：&nbsp;</text>
+                    <text class="navigator-textContent" decode="nbsp">{{item.universityDirectionVOContent.broadDirectionName}},&nbsp;代码：{{item.universityDirectionVOContent.broadDirectionCode}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">一级学科:&nbsp;</text>
+                    <text class="navigator-textContent" decode="nbsp">{{item.universityDirectionVOContent.involvedDirectionName}},&nbsp;代码：{{item.universityDirectionVOContent.involvedDirectionCode}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">二级学科：&nbsp;</text>
+                    <text class="navigator-textContent" decode="nbsp">{{item.universityDirectionVOContent.majorDirectionName}},&nbsp;代码：{{item.universityDirectionVOContent.majorDirectionCode}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">研究所：&nbsp;</text>
+                    <text class="navigator-textContent" decode="nbsp">{{item.universityDirectionVOContent.instituteName}}&nbsp;代码：{{item.universityDirectionVOContent.instituteCode}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">研究方向：&nbsp;</text>
+                    <text class="navigator-textContent">{{item.universityDirectionVOContent.direction}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">考试方式：&nbsp;</text>
+                    <text class="navigator-textContent">{{item.universityDirectionVOContent.examMode}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">学习方式：&nbsp;</text>
+                    <text class="navigator-textContent">{{masterTypes[item.universityDirectionVOContent.masterType-1]}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">招生人数：&nbsp;</text>
+                    <text class="navigator-textContent">{{item.universityDirectionVOContent.recruitmentCount}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">数据更新时间：&nbsp;</text>
+                    <text  class="navigator-textContent">{{item.universityDirectionVOContent.newestPull}}</text>
+                  </view>
+                </navigator>
+
+                <navigator url="#" class="navigator">
+                  <view class="navigator-text">
+                    <text decode="nbsp">考试范围&nbsp;</text>
+                  </view>
+                  <view class="navigator-arrow" bindtap="jumpToExamRangeSite"></view>
+                </navigator>
+
+                <!-- 导航 -->
+              </block>
+            </view>
+          </view>
+<!--  -->
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+
+<!-- 底部信息 -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+         <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">{{tip}}</view>
+        </view>
+    </view>
+</view>

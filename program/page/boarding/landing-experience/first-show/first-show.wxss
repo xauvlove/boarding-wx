@@ -1,0 +1,81 @@
+@import '../../../weui/example/common.wxss';
+
+.placeholder{
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: #fff;
+  height: 2.3em;
+  line-height: 2.3em;
+  color: rgba(0,0,0,.3);
+}
+
+.le-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 50rpx;
+  background-color: #F9FAFD;
+}
+
+.le-content {
+  background-color: #FFFFFF;
+  padding-top: 7rpx;
+  padding-bottom: 7rpx;
+  /* border: 5rpx #0094FF solid; */
+  border-radius: 30rpx;
+  height: 205rpx;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.le-content view {
+  padding-top: 10rpx;
+  /* padding-bottom: 55rpx; */
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  /* padding-right: 10rpx; */
+}
+
+.block-l {
+  float: left;
+  /* text-align:justify;
+  text-align-last:justify; */
+  width: 60%;
+  /* box-sizing: border-box; */
+}
+
+.block-lt {
+  float: left;
+  /* text-align:justify;
+  text-align-last:justify; */
+  width: 60%;
+  line-height: 0px;
+  /* box-sizing: border-box; */
+}
+
+.block-r {
+  float: right;
+  /* text-align:justify;
+  text-align-last:justify; */
+  width: 40%;
+  /* box-sizing: border-box; */
+}
+
+.block-rt {
+  float: right;
+  /* text-align:justify;
+  text-align-last:justify; */
+  width: 40%;
+  line-height: 0px;
+  /* box-sizing: border-box; */
+}
+
+.le-contentStyle {
+  color: deepskyblue;
+  font-size: small;
+}
+
+
+page{
+  background-color: #FFFFFF;
+}

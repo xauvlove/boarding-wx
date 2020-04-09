@@ -1,0 +1,19 @@
+/* miniprogram/page/boarding/university/helpingBoard.wxss */
+@import '../../../weui/example/common.wxss';
+
+.bd-text-size {
+  font-size: medium;
+}
+
+.bd-text-smallsize {
+  font-size: small;
+}
+
+.bd-placeholder-must {
+  color:#40AE46;
+  font-size: small;
+}
+
+.bd-placeholder-alter {
+  font-size: small;
+}

@@ -1,0 +1,80 @@
+<mp-form-page title="Helping Aboard!" subtitle="考研分享">
+    <mp-form id="form" bindsubmit="formSubmit" bindreset="formReset">
+     <form bindsubmit="formSubmit" bindreset="formReset">
+        <mp-cells title="基本信息">
+            <mp-cell prop="universityName" title="高校名" ext-class="" class="bd-text-size">
+                <input bindinput="universityNameInput" data-field="universityName" class="weui-input" placeholder="(必填) 高校全称" placeholder-class="bd-placeholder-must"/>
+            </mp-cell>
+            <mp-cell prop="broadDirectionName" title="门类" ext-class="" class="bd-text-size">
+                <input bindinput="broadDirectionNameInput" data-field="broadDirectionName" class="weui-input" placeholder="(选) 如 工学，文学" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+            <mp-cell prop="involvedDirectionName" title="二级门类" ext-class="weui-cell_vcode" class="bd-text-size">
+                <input bindinput="involvedDirectionNameInput" data-field="involvedDirectionName" class="weui-input" placeholder="(选) 如 计算机科学与技术，外国文学" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+            <mp-cell prop="majorDirectionName" title="专业" ext-class="" class="bd-text-size">
+                <input bindinput="majorDirectionNameInput" data-field="majorDirectionName" class="weui-input" placeholder="(必填) 如 计算机理论，英美文学" placeholder-class="bd-placeholder-must"/>
+            </mp-cell>
+
+            <mp-cell prop="examDate" title="考研年份" ext-class="" class="bd-text-size">
+                <input bindinput="examDateInput" data-field="examDate" class="weui-input" placeholder="(必填) 哪一届考研，如 2017" placeholder-class="bd-placeholder-must"/>
+            </mp-cell>
+
+            <mp-cell prop="examMark" title="初试分数" ext-class="" class="bd-text-size">
+                <input bindinput="examMarkInput" data-field="examMark" class="weui-input" placeholder="(必填) 考研初试总分" placeholder-class="bd-placeholder-must"/>
+            </mp-cell>
+
+            <mp-cell prop="examRank" title="初试名次" ext-class="" class="bd-text-size">
+                <input bindinput="examRankInput" data-field="examMark" class="weui-input" placeholder="(选) 初试排名" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+
+            <mp-cell prop="reExamMarkLimit" title="复试分数线" ext-class="" class="bd-text-size">
+                <input bindinput="reExamMarkLimitInput" data-field="reExamMarkLimit" class="weui-input" placeholder="(选) 复试分数线" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+
+            <mp-cell prop="reExamMark" title="复试总分" ext-class="" class="bd-text-size">
+                <input bindinput="reExamMarkInput" data-field="reExamMark" class="weui-input" placeholder="(选) 复试总分数" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+
+            <mp-cell prop="contactInfo" title="联系方式" ext-class="" class="bd-text-size">
+                <input bindinput="contactInfoInput" data-field="contactInfo" class="weui-input" style="font-size:x-small;" placeholder="(选) 方便后续推出新服务时为你提供平台和后辈与你联系" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+
+        </mp-cells>
+     
+        <mp-cells title="选择" class="bd-text-size">
+            <mp-cell ext-class="weui-cell_select weui-cell_select-after" class="bd-text-size">
+                <view slot="title" class="weui-label">硕士类型</view>
+                <picker bindchange="masterTypeInput" value="{{masterType}}" range="{{masterTypes}}">
+                    <view class="weui-select" style="color:#40AE46">{{masterTypes[masterType]}}</view>
+                </picker>
+            </mp-cell>
+        </mp-cells>
+
+        <mp-cells title="其它信息或考研经验" class="bd-text-size">
+            <!-- <mp-cell has-header="{{false}}" has-footer="{{false}}"> -->
+            <mp-cell> 
+                <textarea bindinput="experienceInput" class="weui-textarea" placeholder="你的考研经验会对学弟学妹们有很大帮助哦！" placeholder-class="bd-placeholder-alter" style="height: 3.3em" />
+                <view class="weui-textarea-counter">0/200</view>
+            </mp-cell>
+         </mp-cells>
+    
+        <view slot="button">
+            <!-- <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+            <button class="weui-btn" bindtap="formReset" >重填</button> -->
+            <button class="weui-btn" type="primary" form-type="submit">确定</button>
+            <button class="weui-btn" form-type="reset">重填</button>
+        </view>
+        </form>
+    </mp-form>
+    <!-- 小提示 -->
+ <view class="page">
+    <view class="page__bd">
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+         <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">学长tips：如果考的还不错，赶快准备复试吧！复试相较于初试更为重要哦！</view>
+        </view>
+    </view>
+</view>    
+</mp-form-page>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "考研登机航班信息",
+  "usingComponents": {
+    "mp-loading": "../../../weui/components/loading/loading"
+  }
+}

@@ -1,0 +1,105 @@
+<view class="le-detail-container">
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">高校名：&nbsp;</text>
+            <text class="le-detail-text-content">{{universityName}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">硕士类型：&nbsp;</text>
+            <text class="le-detail-text-content">{{masterTypes[masterType]}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">门类：&nbsp;</text>
+            <text class="le-detail-text-content">{{broadDirectionName}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">二级门类：&nbsp;</text>
+            <text class="le-detail-text-content">{{involvedDirectionName}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">专业：&nbsp;</text>
+            <text class="le-detail-text-content">{{majorDirectionName}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">研究方向：&nbsp;</text>
+            <text class="le-detail-text-content">{{majorDirectionName}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">考研届：&nbsp;</text>
+            <text class="le-detail-text-content">{{examDate}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">初试分数：&nbsp;</text>
+            <text class="le-detail-text-content">{{examMark}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">初试排名：&nbsp;</text>
+            <text class="le-detail-text-content">{{examRank}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">复试分数线：&nbsp;</text>
+            <text class="le-detail-text-content">{{reExamMarkLimit}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">复试总分：&nbsp;</text>
+            <text class="le-detail-text-content">{{reExamMark}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">联系方式：&nbsp;</text>
+            <text class="le-detail-text-content">{{contactInfo}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">备注和考研经验：</text>
+            <text class="le-detail-text-content">{{experience}}</text>
+        </view>
+    </view>
+
+</view>
+
+    <!-- 小提示 -->
+ <view class="page">
+    <view class="page__bd">
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+         <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">{{tip}}</view>
+        </view>
+    </view>
+</view>

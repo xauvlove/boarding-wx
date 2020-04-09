@@ -1,0 +1,49 @@
+/* page/boarding/landing-experience/landing-exp-detail/landing-exp-detail.wxss */
+/* miniprogram/page/boarding/university/helpingBoard.wxss */
+/* @import '../../../weui/example/common.wxss';
+
+.bd-text-size {
+  font-size: medium;
+}
+
+.bd-text-smallsize {
+  font-size: small;
+} */
+
+@import '../../../weui/example/common.wxss';
+
+.le-detail-container {
+  width: 90%;
+  margin-top: 120rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.le-detail-content {
+  height: auto;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  border-bottom: 2rpx brown solid;
+  border-radius: 5rpx;
+}
+
+.le-detail-content view {
+
+}
+
+.le-detail-text-title {
+  margin-left: 30rpx;
+  /* color: #328CDB; */
+  color: #0094FF;
+}
+
+.le-detail-text-content {
+
+}
+
+
+page{
+  background-color: #FFFFFF;
+}

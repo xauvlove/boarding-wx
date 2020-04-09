@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "助力登机",
+  "component": true,
+  "usingComponents": {
+    "mp-form-page": "../../../weui/components/form-page/form-page",
+    "mp-toptips": "../../../weui/components/toptips/toptips",
+    "mp-cells": "../../../weui/components/cells/cells",
+    "mp-cell": "../../../weui/components/cell/cell",
+    "mp-checkbox": "../../../weui/components/checkbox/checkbox",
+    "mp-checkbox-group": "../../../weui/components/checkbox-group/checkbox-group",
+    "mp-form": "../../../weui/components/form/form"
+  }
+}

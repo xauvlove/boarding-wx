@@ -1,0 +1,57 @@
+
+<view style="width=60%;margin=auto;margin-top: 30rpx;text-align:center;font-size:50rpx">Quickly to boarding!</view>
+
+<view class="le-container" wx:for="{{landingExperiences}}" wx:key="{{item.fid}}">
+  <view class="le-content" id="{{item.fid}}" bindtap="openDetial">
+    <view class="block-l">{{item.universityName}}</view>
+    <view class="block-r">{{item.majorDirectionName}}</view>
+
+    <view class="block-l le-contentStyle">{{masterTypes[item.masterType]}}</view>
+    <view class="block-r le-contentStyle">{{item.examMark}}</view>
+
+    <view class="block-l le-contentStyle">{{item.examDate}}</view>
+    <view class="block-r le-contentStyle">点击查看详情</view>
+  </view>
+</view>
+
+<view style="text-align=right;">
+  <button bindtap="queryLastPage">上一页</button>
+  <button bindtap="queryNextPage">下一页</button> 共找到{{total}}条记录，
+  共 {{totalPage}}页，当前第{{page}}页。
+</view>
+ 
+  <!-- 小提示 -->
+ <view class="page">
+    <view class="page__bd">
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+         <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">{{tip}}</view>
+        </view>
+    </view>
+</view>
+  <!-- <view class="le-content">
+    <view class="block-l">left</view>
+    <view class="block-r">right</view>
+
+    <view class="block-l">left</view>
+    <view class="block-r">right</view>
+
+    <view class="block-l">left</view>
+    <view class="block-r">right</view>
+  </view> -->
+
+
+  <!-- <view class="le-content">
+    <view class="le-content-text">
+       <view style="float:left;">left</view>
+      <view style="float:right;">right</view>
+    </view>
+
+    <view class="le-content-text">
+      <view style="float:left;">left1</view>
+      <view style="float:right;">right1</view>
+    </view>
+  </view> -->
+

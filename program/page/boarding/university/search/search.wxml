@@ -1,0 +1,54 @@
+
+<!-- <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips> -->
+
+<mp-form-page title="查询" subtitle="查询高校信息">
+    <mp-form id="form">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <mp-cells title="基本信息" footer="上面信息至少填写 3 项">
+            <mp-cell prop="universityName" title="高校名" ext-class="" class="bd-text-size">
+                <input bindinput="universityNameInput" data-field="universityName" class="weui-input" placeholder="(必填) 高校全称" placeholder-class="bd-placeholder-must"/>
+            </mp-cell>
+            <mp-cell prop="broadDirectionName" title="门类" ext-class="" class="bd-text-size">
+                <input bindinput="broadDirectionInput" data-field="broadDirectionName" class="weui-input" placeholder="(选) 如[工学]，专硕可不填"  placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+            <mp-cell prop="involvedDirectionName" title="二级门类" ext-class=" weui-cell_vcode" class="bd-text-size">
+                <input bindinput="involvedDirectionInput" data-field="involvedDirectionName" class="weui-input" placeholder="(选)如[计算机科学与技术]，[外国文学]" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+           <mp-cell prop="majorDirectionName" title="三级门类" ext-class="" class="bd-text-size">
+                <input bindinput="majorDirectionInput" data-field="majorDirectionName" class="weui-input" placeholder="(选)如[计算机体系理论]，[英美文学]..." placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+
+            <mp-cell prop="diretionName" title="研究方向" ext-class="" class="bd-text-size">
+                <input bindinput="diretionInput" data-field="diretionName" class="weui-input" placeholder="(选)如[计算机理论]，[英美文学史]..." placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+        </mp-cells> 
+     
+        <mp-cells title="选择">
+            <mp-cell ext-class="weui-cell_select weui-cell_select-after" class="bd-text-size">
+                <view slot="title" class="weui-label">硕士类型</view>
+                <picker bindchange="masterTypeInput" value="{{masterType}}" range="{{masterTypes}}">
+                    <view class="weui-select" style="color:#40AE46">{{masterTypes[masterType]}}</view>
+                </picker>
+            </mp-cell>
+        </mp-cells>
+
+        <view slot="button">
+        <button class="weui-btn" type="primary" form-type="submit">确定</button>
+        <button class="weui-btn" formType="reset" >重填</button>
+     </view>
+    </form>
+    </mp-form>
+ 
+    <!-- 小提示 -->
+ <view class="page">
+    <view class="page__bd">
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+         <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">{{tip}}</view>
+        </view>
+    </view>
+</view>
+</mp-form-page>
+
