@@ -2,5 +2,8 @@
   "navigationBarTitleText": "已登机信息",
   "usingComponents": {
     "mp-loading": "../../../weui/components/loading/loading"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle":"dark",
+  "onReachBottomDistance":70
 }

@@ -3,27 +3,44 @@
 
 <mp-form-page title="查询" subtitle="查询高校信息">
     <mp-form id="form">
-      <form bindsubmit="formSubmit" bindreset="formReset">
-        <mp-cells title="基本信息" footer="上面信息至少填写 3 项">
-            <mp-cell prop="universityName" title="高校名" ext-class="" class="bd-text-size">
-                <input bindinput="universityNameInput" data-field="universityName" class="weui-input" placeholder="(必填) 高校全称" placeholder-class="bd-placeholder-must"/>
+      <!-- <form bindsubmit="formSubmit" bindreset="formReset"> -->
+      <form bindsubmit="formSubmit">
+        <mp-cells title="高校全称一定要填写正确哦!" footer="二级学科和研究方向可不填">
+            <mp-cell prop="universityName" title="高校全称" ext-class="" class="bd-text-size">
+                <input bindinput="universityNameInput" data-field="universityName" class="weui-input" placeholder="如果特殊填：中国地质大学(武汉)" placeholder-class="bd-placeholder-must" placeholder-style="font-size:small;"/>
             </mp-cell>
-            <mp-cell prop="broadDirectionName" title="门类" ext-class="" class="bd-text-size">
+
+            <!-- <mp-cell prop="broadDirectionName" title="门类" ext-class="" class="bd-text-size">
                 <input bindinput="broadDirectionInput" data-field="broadDirectionName" class="weui-input" placeholder="(选) 如[工学]，专硕可不填"  placeholder-class="bd-placeholder-alter"/>
+            </mp-cell> -->
+
+            <mp-cell ext-class="weui-cell_select weui-cell_select-after" class="bd-text-size">
+                <view slot="title" class="weui-label">门类</view>
+                <picker bindchange="broadDirectionNamesInput" value="{{broadDirectionNamesIndex}}" range="{{broadDirectionNames}}">
+                    <view class="weui-select" style="color:#40AE46">{{broadDirectionNames[broadDirectionNamesIndex]}}</view>
+                </picker>
             </mp-cell>
-            <mp-cell prop="involvedDirectionName" title="二级门类" ext-class=" weui-cell_vcode" class="bd-text-size">
+
+            <mp-cell ext-class="weui-cell_select weui-cell_select-after" class="bd-text-size">
+                <view slot="title" class="weui-label">一级学科</view>
+                <picker bindchange="involvedDirectionNamesInput" value="{{involvedDirectionNamesIndex}}" range="{{involvedDirectionNames}}">
+                    <view class="weui-select" style="color:#40AE46">{{involvedDirectionNames[involvedDirectionNamesIndex]}}</view>
+                </picker>
+            </mp-cell>
+
+            <!-- <mp-cell prop="involvedDirectionName" title="二级门类" ext-class=" weui-cell_vcode" class="bd-text-size">
                 <input bindinput="involvedDirectionInput" data-field="involvedDirectionName" class="weui-input" placeholder="(选)如[计算机科学与技术]，[外国文学]" placeholder-class="bd-placeholder-alter"/>
-            </mp-cell>
-           <mp-cell prop="majorDirectionName" title="三级门类" ext-class="" class="bd-text-size">
-                <input bindinput="majorDirectionInput" data-field="majorDirectionName" class="weui-input" placeholder="(选)如[计算机体系理论]，[英美文学]..." placeholder-class="bd-placeholder-alter"/>
+            </mp-cell> -->
+           <mp-cell prop="majorDirectionName" title="二级学科" ext-class="" class="bd-text-size">
+                <input bindinput="majorDirectionInput" data-field="majorDirectionName" class="weui-input" placeholder="(选)如[西方经济学]，[英美文学]..." placeholder-class="bd-placeholder-alter"/>
             </mp-cell>
 
             <mp-cell prop="diretionName" title="研究方向" ext-class="" class="bd-text-size">
-                <input bindinput="diretionInput" data-field="diretionName" class="weui-input" placeholder="(选)如[计算机理论]，[英美文学史]..." placeholder-class="bd-placeholder-alter"/>
+                <input bindinput="diretionInput" data-field="diretionName" class="weui-input" placeholder="(选)如[宏观经济研究]，[英美文学史]..." placeholder-class="bd-placeholder-alter"/>
             </mp-cell>
         </mp-cells> 
      
-        <mp-cells title="选择">
+        <mp-cells title="Boarding tip：非全日制也可以报考学硕哦！">
             <mp-cell ext-class="weui-cell_select weui-cell_select-after" class="bd-text-size">
                 <view slot="title" class="weui-label">硕士类型</view>
                 <picker bindchange="masterTypeInput" value="{{masterType}}" range="{{masterTypes}}">
@@ -33,8 +50,8 @@
         </mp-cells>
 
         <view slot="button">
-        <button class="weui-btn" type="primary" form-type="submit">确定</button>
-        <button class="weui-btn" formType="reset" >重填</button>
+        <button class="weui-btn" type="primary" form-type="submit">查询</button>
+        <!-- <button class="weui-btn" formType="reset" >重填</button> -->
      </view>
     </form>
     </mp-form>

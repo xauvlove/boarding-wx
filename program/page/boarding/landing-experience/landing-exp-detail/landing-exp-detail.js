@@ -5,19 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: { 
-    universityName:null,
-    broadDirectionName:null,
-    involvedDirectionName:null,
-    majorDirectionName:null,
-    examDate:null,
-    examMark:null,
-    examRank:null,
-    reExamMarkLimit:null,
-    reExamMark:null,
-    contactInfo:null,
+    universityName:'',
+    broadDirectionName:'',
+    involvedDirectionName:'',
+    majorDirectionName:'',
+    examDate:'',
+    examMark:'',
+    examRank:'',
+    reExamMarkLimit:'',
+    reExamMark:'',
+    contactInfo:'',
     masterTypes: ["全日制学术硕士", "非全日制学术硕士","全日制专业硕士", "非全日制专业硕士"],
     masterType: 0,
-    experience:null
+    bachelorUniversity:'',
+    experience:''
 
   },
 
@@ -45,14 +46,12 @@ Page({
     wx.request({
       url: domainPrefix + '/tip/bottom',
       success(res) {
-        console.log(res);
         _this.setData({
           tip:res.data
         });
       }
     })
     var expDetail = wx.getStorageSync('landingExpDetail');
-    console.log(expDetail)
     this.setData({
       universityName:expDetail.universityName,
       broadDirectionName:expDetail.broadDirectionName,
@@ -65,6 +64,7 @@ Page({
       reExamMark:expDetail.reExamMark,
       contactInfo:expDetail.contactInfo,
       masterType: expDetail.masterType,
+      bachelorUniversity: expDetail.bachelorUniversity,
       experience:expDetail.experience,
       tip:''
     });

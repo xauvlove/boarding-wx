@@ -11,12 +11,6 @@ Page({
 
   data: {
     universityDirections:[],
-    // universityName:null,
-    // broadDirectionName:null,
-    // involvedDirectionName:null,
-    // majorDirectionName:null,
-    // directionName:null,
-    // learningMode:null,
     masterTypes: ["全日制学术硕士", "非全日制学术硕士","全日制专业硕士", "非全日制专业硕士"],
     masterType: 0,
     tip:''
@@ -29,21 +23,19 @@ Page({
     let pages = getCurrentPages();
     let previousPage = null;
     //let currentPage = null;
-    console.log('loading university direction page');
     if(pages.length >= 2) {
       previousPage = pages[pages.length-2];
-      //currentPage = pages[pages.length-1];
       this.setData({
         universityDirections:previousPage.data.universityDirections,
-        // universityName:previousPage.data.universityName,
-        // broadDirectionName:previousPage.data.broadDirectionName,
-        // involvedDirectionName:previousPage.data.involvedDirectionName,
-        // majorDirectionName:previousPage.data.majorDirectionName,
-        // directionName:previousPage.data.directionName,
-        // learningMode:previousPage.data.learningMode,
-        //masterTypes:previousPage.data.masterTypes,
         masterType:previousPage.data.masterType
       });
+    }
+    if(this.data.universityDirections.length <= 0) {
+      wx.showToast({
+        title: '高校不招此类硕士',
+        icon:'none',
+        duration:3000
+      })
     }
   },
   // 展开详情
@@ -69,7 +61,6 @@ Page({
     wx.request({
       url: domainPrefix + '/tip/bottom',
       success(res) {
-        console.log(res);
         _this.setData({
           tip:res.data
         });
@@ -77,9 +68,9 @@ Page({
     })
   },
   jumpToExamRangeSite(e){
-    const url = "https://www.baidu.com"
-    wx.request({
-      url: url,
+    wx.showToast({
+      title: '功能正在开发中 ~ ',
+      icon:'none'
     })
   }
 })

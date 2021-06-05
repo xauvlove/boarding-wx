@@ -1,5 +1,17 @@
 
-<view style="width=60%;margin=auto;margin-top: 30rpx;text-align:center;font-size:50rpx">Quickly to boarding!</view>
+<view style="width=60%;margin=auto;margin-top: 110rpx;text-align:center;font-size:50rpx;font-weight:bolder;">Quickly to boarding!</view>
+<view style="width=60%;margin=auto;margin-top: 30rpx;text-align:center;font-size:30rpx">痛点信息，一手掌握！</view>
+
+  <!-- <view class="le-content" style="width:90%;margin: auto;margin-top: 50rpx;">
+    <view class="block-l">高校名</view>
+    <view class="block-r">专业</view>
+
+    <view class="block-l le-contentStyle">硕士类型</view>
+    <view class="block-r le-contentStyle">初试分数</view>
+
+    <view class="block-l le-contentStyle">考研日期</view>
+    <view class="block-r le-contentStyle">点击查看详情</view>
+  </view> -->
 
 <view class="le-container" wx:for="{{landingExperiences}}" wx:key="{{item.fid}}">
   <view class="le-content" id="{{item.fid}}" bindtap="openDetial">

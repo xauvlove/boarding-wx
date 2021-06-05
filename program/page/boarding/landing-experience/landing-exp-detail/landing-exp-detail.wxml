@@ -22,7 +22,7 @@
 
     <view class="le-detail-content">
         <view> 
-            <text class="le-detail-text-title" decode="nbsp">二级门类：&nbsp;</text>
+            <text class="le-detail-text-title" decode="nbsp">一级学科：&nbsp;</text>
             <text class="le-detail-text-content">{{involvedDirectionName}}</text>
         </view>
     </view>
@@ -73,6 +73,13 @@
         <view> 
             <text class="le-detail-text-title" decode="nbsp">复试总分：&nbsp;</text>
             <text class="le-detail-text-content">{{reExamMark}}</text>
+        </view>
+    </view>
+
+    <view class="le-detail-content">
+        <view> 
+            <text class="le-detail-text-title" decode="nbsp">本科学校：&nbsp;</text>
+            <text class="le-detail-text-content">{{bachelorUniversity}}</text>
         </view>
     </view>
 

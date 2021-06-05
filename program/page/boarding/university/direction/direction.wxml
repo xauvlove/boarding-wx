@@ -3,6 +3,7 @@
     <!-- <image class="index-logo" src="resources/kind/logo.png"></image> -->
     <view class="index-desc">以下是查询到您所选择的高校招生详细信息</view>
     <view class="index-desc" style="color:blue">点击可查看专业招生详情</view>
+    <view class="index-desc" style="color:#FA8072;font-size:small;">以下结果均不含推免名额</view>
   </view>
   <view class="index-bd">
     <view class="kind-list">
@@ -107,7 +108,7 @@
                 </navigator>
 
                 <navigator url="#" class="navigator">
-                  <view class="navigator-text">
+                  <view class="navigator-text" bindtap="jumpToExamRangeSite">
                     <text decode="nbsp">考试范围&nbsp;</text>
                   </view>
                   <view class="navigator-arrow" bindtap="jumpToExamRangeSite"></view>

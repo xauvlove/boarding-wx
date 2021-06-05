@@ -26,6 +26,7 @@
   height: 205rpx;
   margin-top: 10px;
   margin-bottom: 10px;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #888888;
 }
 
 .le-content view {

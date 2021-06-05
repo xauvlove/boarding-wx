@@ -6,11 +6,11 @@
 // 小程序后台服务解决方案：https://www.qcloud.com/solution/la
 
 const host = '14592619.qcloud.la'
-
+//const host = 'localhost:8077/wx'
 const config = {
 
   // 下面的地址配合云端 Server 工作
-  host,
+  host, 
 
   // 登录地址，用于建立会话
   loginUrl: `https://${host}/login`,

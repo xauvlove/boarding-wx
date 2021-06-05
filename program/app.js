@@ -12,6 +12,8 @@ App({
         traceUser: true,
       })
     }
+    this.loginToBoarding();
+    //this.checkSession();
   },
   onShow(opts) {
     console.log('App Show', opts)
@@ -22,13 +24,61 @@ App({
   globalData: {
     hasLogin: false,
     openid: null,
-    domainPrefix:'http://118.25.188.245:8077',
-    //domainPrefix:'http://localhost:8077',
+    //domainPrefix:'https://www.boarding.show/boarding',
+    domainPrefix:'http://localhost:8077',
+  },
+  checkSession(){
+    const _this = this;
+    wx.checkSession({
+      success(){
+        // wx.showToast({
+        //   title: 'ok',
+        // })
+      },
+      fail(){
+        // wx.showToast({
+        //   title: 'faild',
+        // })
+        _this.loginToBoarding();
+      }
+    })
+  },
+  loginToBoarding() {
+    let _domainPrefix = this.globalData.domainPrefix;
+    wx.login({
+      success(res){
+        if(res.code){
+          wx.request({
+            url: _domainPrefix + '/wx/login',
+            data:{
+              code:res.code
+            },
+            method:'POST',
+            header:{
+              'content-type':'application/x-www-form-urlencoded'
+            },
+            success(res) {
+              if(res.data.status == 200) {
+                let ticket = res.data.ticket;
+                console.log(ticket)
+                //保存到客户端本地
+                wx.setStorageSync('LOGININFO', ticket)
+              } else {
+                wx.removeStorageSync('LOGININFO');
+              }
+            }
+          })
+        } else{
+          console.log('login faild');
+        }
+      },
+      complete: (res) => {},
+    })
   },
   // lazy loading openid
   getUserOpenId(callback) {
-    const self = this
-
+    const self = this;
+    console.log('login----------')
     if (self.globalData.openid) {
       callback(null, self.globalData.openid)
     } else {

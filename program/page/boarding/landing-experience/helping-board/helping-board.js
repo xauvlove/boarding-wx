@@ -17,9 +17,15 @@ Page({
     contactInfo:null,
     masterTypes: ["[~] 全日制学术硕士", "[~] 非全日制学术硕士","[~] 全日制专业硕士", "[~] 非全日制专业硕士"],
     masterType: 0,
+    bachelorUniversity:null,
     experience:null
   },
-
+  onShareAppMessage() {
+    return {
+      title: '分享给小伙伴吧！',
+      path: 'page/boarding/landing-experience/helping-board/helping-board'
+    }
+  },
   formSubmit() {
     const _this = this;
     this.selectComponent('#form').validate((valid, errors) => {
@@ -64,7 +70,8 @@ Page({
         reExamMark:_this.data.reExamMark,
         contactInfo:_this.data.contactInfo,
         masterType:_this.data.masterType,
-        experience:_this.data.experience
+        bachelorUniversity:this.data.bachelorUniversity,
+        experience:_this.data.experience,
       },
       fail(res){
         wx.showToast({
@@ -207,4 +214,9 @@ Page({
       experience:e.detail.value
     });
   },
+  bachelorUniversityInput:function(e) {
+    this.setData({
+      bachelorUniversity:e.detail.value
+    });
+  }
 })

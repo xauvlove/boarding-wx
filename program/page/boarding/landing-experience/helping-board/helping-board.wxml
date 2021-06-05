@@ -1,18 +1,18 @@
 <mp-form-page title="Helping Aboard!" subtitle="考研分享">
     <mp-form id="form" bindsubmit="formSubmit" bindreset="formReset">
      <form bindsubmit="formSubmit" bindreset="formReset">
-        <mp-cells title="基本信息">
-            <mp-cell prop="universityName" title="高校名" ext-class="" class="bd-text-size">
+        <mp-cells title="信息填写详细准确可以尽早与学弟学妹会和！">
+            <mp-cell prop="universityName" title="高校全称" ext-class="" class="bd-text-size">
                 <input bindinput="universityNameInput" data-field="universityName" class="weui-input" placeholder="(必填) 高校全称" placeholder-class="bd-placeholder-must"/>
             </mp-cell>
             <mp-cell prop="broadDirectionName" title="门类" ext-class="" class="bd-text-size">
                 <input bindinput="broadDirectionNameInput" data-field="broadDirectionName" class="weui-input" placeholder="(选) 如 工学，文学" placeholder-class="bd-placeholder-alter"/>
             </mp-cell>
-            <mp-cell prop="involvedDirectionName" title="二级门类" ext-class="weui-cell_vcode" class="bd-text-size">
+            <mp-cell prop="involvedDirectionName" title="一级学科" ext-class="weui-cell_vcode" class="bd-text-size">
                 <input bindinput="involvedDirectionNameInput" data-field="involvedDirectionName" class="weui-input" placeholder="(选) 如 计算机科学与技术，外国文学" placeholder-class="bd-placeholder-alter"/>
             </mp-cell>
             <mp-cell prop="majorDirectionName" title="专业" ext-class="" class="bd-text-size">
-                <input bindinput="majorDirectionNameInput" data-field="majorDirectionName" class="weui-input" placeholder="(必填) 如 计算机理论，英美文学" placeholder-class="bd-placeholder-must"/>
+                <input bindinput="majorDirectionNameInput" data-field="majorDirectionName" class="weui-input" placeholder="(必填) 如 计算机科学与技术，文艺学" placeholder-class="bd-placeholder-must"/>
             </mp-cell>
 
             <mp-cell prop="examDate" title="考研年份" ext-class="" class="bd-text-size">
@@ -35,8 +35,12 @@
                 <input bindinput="reExamMarkInput" data-field="reExamMark" class="weui-input" placeholder="(选) 复试总分数" placeholder-class="bd-placeholder-alter"/>
             </mp-cell>
 
+            <mp-cell prop="bachelorUniversityInput" title="本科学校" ext-class="" class="bd-text-size">
+                <input bindinput="bachelorUniversityInput" data-field="bachelorUniversity" class="weui-input" placeholder="(选) 激励一下学弟学妹" placeholder-class="bd-placeholder-alter"/>
+            </mp-cell>
+
             <mp-cell prop="contactInfo" title="联系方式" ext-class="" class="bd-text-size">
-                <input bindinput="contactInfoInput" data-field="contactInfo" class="weui-input" style="font-size:x-small;" placeholder="(选) 方便后续推出新服务时为你提供平台和后辈与你联系" placeholder-class="bd-placeholder-alter"/>
+                <input bindinput="contactInfoInput" data-field="contactInfo" class="weui-input" placeholder="(选) 方便后续推出新服务时为你提供平台和后辈与你联系" placeholder-class="bd-placeholder-alter"/>
             </mp-cell>
 
         </mp-cells>
